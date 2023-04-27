@@ -1,0 +1,13 @@
+
+.react-multiple-carousel__arrow--left {
+  display: none;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: calc(4% + -45px) !important;
+  top: -23px !important;  
+}
+
+.react-multiple-carousel__arrow {
+  top: -30px !important;
+}

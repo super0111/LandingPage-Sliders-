@@ -1,11 +1,23 @@
+import { Box } from '@mui/material'
+import { palette } from '@/themes'
 import {
   Header,
+  FeaturedApartments,
+  PopularAreas,
+  DowntownDubai,
+  OffPlanProperties,
 } from '../components/home'
 
 export default function HomePage () {
   return (
-    <div className="">
+    <Box sx={{
+      background: palette.common.black,
+    }}>
       <Header />
-    </div>
+      <FeaturedApartments />
+      <PopularAreas />
+      <DowntownDubai />
+      <OffPlanProperties />
+    </Box>
   )
 }

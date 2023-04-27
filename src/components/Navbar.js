@@ -1,41 +1,44 @@
 import { useRouter } from "next/router"
 import Link from "next/link";
-import Image from "next/image";
+import { Box, Button, Typography } from "@mui/material";
 
 const navItems = [
   { name: 'Home', to: '/' },
-  { name: 'About', to: '/about' },
-  { name: 'Blog', to: '/blog' },
+  { name: 'Buy', to: '/buy' },
+  { name: 'Sell', to: '/sell' },
+  { name: 'Rent', to: '/rent' },
+  { name: 'Properties', to: '/properties' },
 ]
 
 export default function Navbar() {
   const router = useRouter();
   return (
-    <header className="flex justify-between container max-w-screen-xl  md:px-0">
-      <Image
-        src={""}
-        alt="Supercluster Labs Logo"
-        className="cursor-pointer"
-        onClick={()=>router.push('/')}
-      />
-      <div className="flex justify-between align-center bg-white w-full rounded-full ml-8 py-4 pr-8">
-        <div className="flex align-center">
-          {
-            navItems.map((item, i)=> (
-              <button key={i}
-                className={"text-black mx-6 font-bold"}
-                onClick={()=> router.push(`/${item.to}`)}
-              >{item.name}</button>
-            ))
-          }
-        </div>
+    <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+      <Typography sx={{
+
+      }}>
+        DELATTIO
+      </Typography>
+      <Box display={'flex'} alignContent={'center'}>
+        {
+          navItems.map((item, i)=> (
+            <Button key={i}
+              onClick={()=> router.push(`/${item.to}`)}
+            >{item.name}</Button>
+          ))
+        }
+      </Box>
+      <Box display={'flex'} alignItems={'center'}>
+        <select>
+          <option>AED</option>
+          <option>AED</option>
+        </select>
         <Link target="_blank" href="https://supercluster-labs.beehiiv.com/subscribe">
-          <button
-            className='hidden md:block px-5 py-3 font-bold rounded-full drop-shadow bg-black hover:bg-slate-900 transition-all text-supercluster-primary'>
-            Get early access
-          </button>
+          <Button>
+            Sign In
+          </Button>
         </Link>
-      </div>
-    </header>
+      </Box>
+    </Box>
   );
 }
