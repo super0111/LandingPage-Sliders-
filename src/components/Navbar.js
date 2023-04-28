@@ -54,8 +54,10 @@ export default function Navbar() {
               background: 'none',
               border: 'none',
               fontSize: 18,
+              cursor: 'pointer',
+              color: 'white',
             }}>
-              <option>AED</option>
+              <option style={{color: 'black'}}>AED</option>
               <option>AED</option>
             </select>
             <Button sx={{

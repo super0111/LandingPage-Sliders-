@@ -4,7 +4,8 @@ import 'react-multi-carousel/lib/styles.css'
 import { palette } from "@/themes"
 import { Box, Button, Grid, Typography } from "@mui/material"
 
-import image1 from '../../assets/images/lion.jpg'
+import image1 from '../../assets/images/Header.png'
+import image2 from '../../assets/images/Layer 57.png'
 
 const responsive = {
   desktop: {
@@ -23,10 +24,10 @@ const responsive = {
 
 const imageItems = [
   { url: image1, concept: 651, number: '01' },
-  { url: image1, concept: 216, number: 'PENTHOUSE' },
+  { url: image2, concept: 216, number: 'PENTHOUSE' },
   { url: image1, concept: 651, number: 'PENTHOUSE' },
   { url: image1, concept: 621, number: 'PENTHOUSE' },
-  { url: image1, concept: 651, number: 'PENTHOUSE' },
+  { url: image2, concept: 651, number: 'PENTHOUSE' },
 ]
 
 const items = [
