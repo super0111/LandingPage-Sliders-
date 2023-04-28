@@ -53,7 +53,7 @@ export const DowntownDubai = () => {
       className='downtown'
       mt={16} px={{ sm: 8, xs: 4 }} 
       sx={{
-        backgroundImage: `url(/assets/Header.png)`,
+        backgroundImage: `url(/assets/Layer 761.png)`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: { md: '720px', xs: '600px'},
