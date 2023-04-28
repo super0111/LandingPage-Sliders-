@@ -5,34 +5,36 @@ const createTypographySystem = () => {
     body1: {
       fontSize: 18,
       fontStyle: 'normal',
+      textTransform: 'initial',
       fontWeight: 400,
     },
     body2: {
       fontSize: '16px',
       fontWeight: 400,
-    },
-    button: {
-      alignItems: 'center',
-      display: 'flex',
-      fontSize: 14,
-      fontWeight: 700,
+      color: '#c9c9c9 !important',
     },
     h1: {
       fontSize: 62,
-      fontWeight: 700,
+      fontWeight: 500,
     },
     h2: {
-      fontSize: '42px',
-      fontWeight: 700,
+      fontSize: 42,
+      fontWeight: 600,
     },
     h3: {
-      fontSize: '36px',
-      fontWeight: 400,
+      fontSize: 18,
+      fontWeight: 600,
     },
     h4: {
-      fontSize: '24px',
-      fontWeight: 700,
+      fontSize: 16,
+      fontWeight: 400,
     },
+    h5: {
+      fontSize: 15,
+    },
+    h6: {
+      fontSize: 14,
+    }
   }
 }
 
@@ -44,7 +46,7 @@ const createPaletteSystem = () => ({
   primary: {
     dark: '#513F01 !important',
     light: '#CA9F02',
-    main: '#FDD649 !important',
+    main: '#FFFFFF',
   },
   secondary: {
     main: '#3ffefd',
@@ -66,24 +68,26 @@ const theme = createTheme({
           background: 'black !important',
           color: 'white',
           borderRadius: '0px !important',
+          textTransform: 'initial',
+          fontSize: 16,
         },
       },
-      // variants: [
-      //   {
-      //     props: { variant: 'contained'},
-      //     style: {
+      variants: [
+        {
+          props: { variant: 'contained'},
+          style: {
             
-      //     },
-      //   },
-      //   {
-      //     props: { variant: 'outlined'},
-      //     style: {
-      //       '&:hover': {
-      //         color: 'white',
-      //       },
-      //     },
-      //   },
-      // ],
+          },
+        },
+        {
+          props: { variant: 'outlined'},
+          style: {
+            '&:hover': {
+              color: 'white',
+            },
+          },
+        },
+      ],
     },
     MuiTypography: {
       styleOverrides: {
