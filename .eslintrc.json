@@ -22,7 +22,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "next"
+        "react"
     ],
     "rules": {
         "react/prop-types": "off",
