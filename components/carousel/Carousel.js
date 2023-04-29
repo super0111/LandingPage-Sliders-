@@ -93,16 +93,19 @@ const Carousel = ({ data, title }) => {
                 {item.title}
               </button>
             )}
+
             <img
               alt="banner"
               src={item.img}
               className={`object-cover w-full ${
-                title === "banner"
-                  ? "h-[1113px]"
-                  : title === "Search"
-                  ? "h-[434px] 2xl:h-[630px]"
-                  : "h-auto"
-              }`}
+                title === "header" ?
+                  "h-[600px] md:h-[800px] sm:h-[800px]"
+                  :title === "banner"
+                    ? "h-[1113px]"
+                    : title === "Search"
+                    ? "h-[434px] 2xl:h-[630px]"
+                    : "h-auto"
+                }`}
             />
           </div>
         ))}
