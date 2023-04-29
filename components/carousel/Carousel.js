@@ -29,6 +29,29 @@ const Carousel = ({ data, title }) => {
     },
   };
 
+  const settings1 = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: false,
+    swipe: false,
+    dotsClass: "button__bar slick-dots",
+    arrows: true,
+    beforeChange: (current, next) => {
+      setNextId(nextId + 1);
+      thumbnailSliderRef.current.slickGoTo(nextId);
+    },
+    appendDots: (dots) => {
+      return (
+        <div>
+          <ul>{dots.slice(0, 3)}</ul>
+        </div>
+      );
+    },
+  };
+
   const feSettings = {
     infinite: true,
     lazyLoad: true,
@@ -61,7 +84,7 @@ const Carousel = ({ data, title }) => {
 
   return (
     <div className="relative text-align-center">
-      <Slider {...settings} ref={mainSliderRef}>
+      <Slider {...title==="arrayCarousel" ? settings1 : settings} ref={mainSliderRef}>
         {data.map((item, index) => (
           <div className="relative" key={index}>
             {title === "banner" && (
@@ -93,7 +116,6 @@ const Carousel = ({ data, title }) => {
                 {item.title}
               </button>
             )}
-
             <img
               alt="banner"
               src={item.img}

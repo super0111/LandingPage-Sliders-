@@ -3,8 +3,8 @@ import { palette } from '@/themes'
 import {
   Header,
   FeaturedApartments,
-  // PopularAreas,
-  // DowntownDubai,
+  PopularAreas,
+  DowntownDubai,
   // OffPlanProperties,
 } from '../../components/home'
 
@@ -15,8 +15,8 @@ export default function HomePage () {
     }}>
       <Header />
       <FeaturedApartments />
-      {/* <PopularAreas /> */}
-      {/* <DowntownDubai /> */}
+      <PopularAreas />
+      <DowntownDubai />
       {/* <OffPlanProperties /> */}
     </Box>
   )

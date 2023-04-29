@@ -121,9 +121,7 @@
     margin: 0 auto;
 }
 
-.dslide img {
-    margin: 0 auto;
-}
+
 
 select option {
     background: black;
@@ -139,6 +137,26 @@ select option {
     transition: transform 300ms;
     opacity: 0.5;
 }
+.dslide img {
+    margin: 0 auto;
+}
+.featuredApartments .dslide {
+    transform: scale(0.93);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+.popularAreas .dslide {
+    transform: scale(0.85);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+.featuredApartments .dslide img {
+    margin: 0 auto;
+}
+
+
 
 .fslide {
     transition: transform 300ms;
@@ -270,4 +288,39 @@ select option {
     top: 14px;
     opacity: 0;
     transition: 0.2s ease-in all;
+}
+
+
+.featuredApartments .slick-prev {
+    left: 15px;
+    z-index: 100;
+}
+.featuredApartments .slick-next {
+    right: 15px;
+    z-index: 100;
+}
+.featuredApartments .slick-prev::before,
+.featuredApartments .slick-next::before {
+    font-size: 30px;
+}
+
+.popularAreas .slick-prev {
+    display: none !important;
+}
+.popularAreas .slick-next {
+    right: 15px;
+    z-index: 100;
+    top: 0%;
+}
+.popularAreas .slick-prev::before,
+.popularAreas .slick-next::before {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .popularAreas .slick-next {
+        right: 15px;
+        z-index: 100;
+        top: -5%;
+    }
 }

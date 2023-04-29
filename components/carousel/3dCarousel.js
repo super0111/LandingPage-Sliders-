@@ -1,5 +1,7 @@
 import React ,{useState} from "react";
+import { Box, Typography } from "@mui/material";
 import Slider from "react-slick";
+
 const DCarousel = ({data, title}) => {
     const [imgIndex,setImgIndex] = useState(0)
     const settings = {
@@ -87,11 +89,86 @@ const DCarousel = ({data, title}) => {
             }
         ]
       };
+
+    const popularSettings = {
+        className: 'center',
+        centerMode: true,
+        infinite: true,
+        centerPadding: '485px',
+        slidesToShow: 1,
+        speed: 300,
+        dotsClass: "slick-dots",
+        beforeChange: (current, next) => setImgIndex(next), 
+        arrows:true,
+        responsive:[
+            {
+                breakpoint: 1920,
+                settings: {
+                    className: 'center',
+                    centerMode: true,
+                    slidesToShow: 1,
+                    slidesToShow: 1,
+                    centerPadding: '355px',
+                }
+            },
+            {
+                breakpoint: 1540,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '315px',
+                }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '300px',
+                }
+            },
+            {
+                breakpoint: 1366,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '295px',
+                }
+            },
+            {
+                breakpoint: 1280,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '285px',
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '200px',
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '150px',
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '0',
+                }
+            }
+        ]
+      };
+
+
       const className=title==="journal"?"h-[200px] xl:h-[296px] w-full object-cover":"w-full object-cover";
       const slideClass =title==="journal"?"dslide relative activeSlide":"relative"
     return ( 
        <div className="slider">
-         <Slider {...title==="journal"?settings:feSettings}>
+         <Slider {...title==="journal"?settings:title==='popular'?popularSettings:feSettings}>
             {data.map((item, idx) => (
                 <div key={idx} className={idx === imgIndex ? slideClass : "dslide"}>   
                     <img 
@@ -110,6 +187,16 @@ const DCarousel = ({data, title}) => {
                              10,00,000 AED
                         </span>
                     </div>}
+                    {title==='popular' && 
+                        <Box sx={{
+                            position: 'absolute',
+                            bottom: '15px',
+                            left: '30px',
+                        }}>
+                            <Typography variant='h4'>{item.text1}</Typography>
+                            <Typography variant='h4'>{item.text2}</Typography>
+                        </Box> 
+                    }
                 </div>
             ))}
         </Slider>
