@@ -23,7 +23,7 @@ export const OffPlanProperties = () => {
         Off-Plan properties
       </Typography>
       <Box mt={8} display={'flex'} justifyContent={'space-between'} sx={{
-        width: { xs: '250px', sm: '620px', md: '620px', lg: '1100px'},
+        width: { xs: '100%', sm: '620px', lg: '1100px'},
         margin: 'auto',
         overflowX: 'auto',
       }}>
@@ -31,10 +31,13 @@ export const OffPlanProperties = () => {
           propertyItems.map((item, i) => (
             <Box key={i} sx={{
               position: 'relative',
+              margin: { xs: '0 5px', sm: 0 },
+              width: { sx:"100%", sm: '205px', xs: '250px' },
+              flex: 'none',
             }}>
               <Box component={'img'} mx={1} src={item.url.src} alt="" sx={{
-                width: { sm: '200px', xs: '250px' },
                 height: '450px',
+                width: '100%',
                 marginTop: { sm: i === 0 ? 0 : i === 1? '40px' : i === 2 ? '20px' : i === 3 ? '40px' : 0, xs: 0 },
                 transition: 0.5,
                 opacity: 0.3,
@@ -46,7 +49,8 @@ export const OffPlanProperties = () => {
                 maxWidth: '80%',
                 position: 'absolute',
                 left: '9%',
-                top: '45%',
+                top: { xs: 'initial', sm: '45%'},
+                bottom: { xs: '20px', sm: 'initial'},
                 textAlign: 'center',
               }}>
                 {item.text}

@@ -84,7 +84,7 @@ const Carousel = ({ data, title }) => {
 
   return (
     <div className="relative text-align-center">
-      <Slider {...title==="arrayCarousel" ? settings1 : settings} ref={mainSliderRef}>
+      <Slider {... title==="arrayCarousel" ? settings1 : settings } ref={mainSliderRef}>
         {data.map((item, index) => (
           <div className="relative" key={index}>
             {title === "banner" && (

@@ -152,11 +152,11 @@ select option {
     opacity: 0.5;
 }
 
-.featuredApartments .dslide img {
-    margin: 0 auto;
+.downtown .dslide {
+    transform: scaleY(0.7);
+    transition: transform 300ms;
+    opacity: 0.75;
 }
-
-
 
 .fslide {
     transition: transform 300ms;
@@ -313,8 +313,22 @@ select option {
     top: 0%;
 }
 .popularAreas .slick-prev::before,
-.popularAreas .slick-next::before {
+.popularAreas .slick-next::before,
+.downtown .slick-prev::before,
+.downtown .slick-next::before {
     font-size: 30px;
+}
+
+.downtown .slick-prev {
+    left: initial;
+    right: 130px;
+    z-index: 100;
+    top: -3%;
+}
+.downtown .slick-next {
+    right: 35px;
+    z-index: 100;
+    top: -3%;
 }
 
 @media screen and (max-width: 768px) {

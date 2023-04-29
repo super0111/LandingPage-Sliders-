@@ -4,6 +4,7 @@ import Slider from "react-slick";
 
 const DCarousel = ({data, title}) => {
     const [imgIndex,setImgIndex] = useState(0)
+
     const settings = {
         dots:true,
         infinite: true,
@@ -31,6 +32,7 @@ const DCarousel = ({data, title}) => {
             }
         ]
       };
+      
     const feSettings = {
         className: 'center',
         centerMode: true,
@@ -163,25 +165,101 @@ const DCarousel = ({data, title}) => {
         ]
       };
 
+    const downtownSettings = {
+        className: 'bottom',
+        centerMode: true,
+        infinite: true,
+        centerPadding: '0px',
+        slidesToShow: 1,
+        beforeChange: (current, next) => setImgIndex(next), 
+        arrows:true,
+        responsive:[
+            {
+                breakpoint: 1920,
+                settings: {
+                    className: 'center',
+                    centerMode: true,
+                    slidesToShow: 1,
+                    slidesToShow: 1,
+                    centerPadding: '125px',
+                }
+            },
+            {
+                breakpoint: 1540,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '180px',
+                }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '180px',
+                }
+            },
+            {
+                breakpoint: 1366,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '185px',
+                }
+            },
+            {
+                breakpoint: 1280,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '180px',
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '120px',
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '120px',
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                 slidesToShow: 1,
+                 centerPadding: '0',
+                }
+            }
+        ]
+      };
 
-      const className=title==="journal"?"h-[200px] xl:h-[296px] w-full object-cover":"w-full object-cover";
-      const slideClass =title==="journal"?"dslide relative activeSlide":"relative"
+
+    const className=title==="journal"?"h-[200px] xl:h-[296px] w-full object-cover":"w-full object-cover";
+    const slideClass =title==="journal"?"dslide relative activeSlide":"relative";
+
     return ( 
        <div className="slider">
-         <Slider {...title==="journal"?settings:title==='popular'?popularSettings:feSettings}>
+         <Slider {...title==="journal"?settings:title==='popular'?popularSettings:title==='downtown'?downtownSettings:feSettings}>
             {data.map((item, idx) => (
                 <div key={idx} className={idx === imgIndex ? slideClass : "dslide"}>   
                     <img 
                         src={item.img}
                         alt={idx}
                         className={className}
+                        style={{
+                            height: title==='downtown'?'230px':'initial',
+                            marginTop: title==='downtown' && idx === imgIndex ?'-35px':'initial',
+                        }}
                     />
                     {title==="villa" && <div className="absolute bottom-[26px] left-[26px] right-[26px] flex items-center justify-between">
                         <button className="flex items-center gap-2">
-                                <span className="text-[19px] text-white font-normal leading-[19px]">
-                                    Jumeirah
-                                </span>
-                                <img alt="arrow" src="/images/angle-right.svg" className="h-2.5" />
+                            <span className="text-[19px] text-white font-normal leading-[19px]">
+                                Jumeirah
+                            </span>
+                            <img alt="arrow" src="/images/angle-right.svg" className="h-2.5" />
                         </button>
                         <span className="text-[19px] text-white font-normal leading-[19px]">
                              10,00,000 AED
@@ -196,6 +274,25 @@ const DCarousel = ({data, title}) => {
                             <Typography variant='h4'>{item.text1}</Typography>
                             <Typography variant='h4'>{item.text2}</Typography>
                         </Box> 
+                    }
+                    {title==='downtown' &&
+                        <Box>
+                            <Typography variant='h4' sx={{
+                                position: 'absolute',
+                                display: { lg: 'block', xs: 'none' },
+                                bottom: '15px',
+                                left: '15px',
+                                fontWeight: 700,
+                            }}>Concept . {item.concept}</Typography>
+                            <Typography variant='h4' sx={{
+                                display: { lg: 'block', xs: 'none' },
+                                position: 'absolute',
+                                top: '10px',
+                                left: '30px',
+                                fontWeight: 700,
+                                zIndex: 100
+                            }}>0{idx+1}</Typography>
+                        </Box>
                     }
                 </div>
             ))}

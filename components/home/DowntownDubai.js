@@ -1,32 +1,13 @@
-import { useRef, useState } from 'react'
-// import Carousel from 'react-multi-carousel'
-// import 'react-multi-carousel/lib/styles.css'
 import { palette } from "@/themes"
 import { Box, Button, Grid, Typography } from "@mui/material"
+import DCarousel from "../carousel/3dCarousel"
 
-import image1 from '../../assets/images/lion.jpg'
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
-
-const imageItems = [
-  { url: image1, concept: 651, number: '01' },
-  { url: image1, concept: 216, number: 'PENTHOUSE' },
-  { url: image1, concept: 651, number: 'PENTHOUSE' },
-  { url: image1, concept: 621, number: 'PENTHOUSE' },
-  { url: image1, concept: 651, number: 'PENTHOUSE' },
+const data = [
+  { img: '/images/Header.png', concept: 651, number: '01' },
+  { img: '/images/Header.png', concept: 216, number: 'PENTHOUSE' },
+  { img: '/images/Header.png', concept: 651, number: 'PENTHOUSE' },
+  { img: '/images/Header.png', concept: 621, number: 'PENTHOUSE' },
+  { img: '/images/Header.png', concept: 651, number: 'PENTHOUSE' },
 ]
 
 const items = [
@@ -37,12 +18,6 @@ const items = [
 ]
 
 export const DowntownDubai = () => {
-  const mainCarousel = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleAfterCarouselChg = (nextSlide) => {
-    setCurrentSlide(nextSlide);
-  };
 
   return (
     <Box 
@@ -52,10 +27,10 @@ export const DowntownDubai = () => {
       className='downtown'
       mt={16} px={{ sm: 8, xs: 4 }} 
       sx={{
-        backgroundImage: `url(/assets/Header.png)`,
+        backgroundImage: `url(/images/Header.png)`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: { md: '720px', xs: '600px'},
+        height: { md: '650px', xs: '580px'},
         position: 'relative',
       }}
     >
@@ -97,53 +72,15 @@ export const DowntownDubai = () => {
               }
             </Grid>
           </Grid>
-          <Grid item md={6} xs={12} display={{ md: 'flex', sm: 'none' }} justifyContent={'end'}>
+          <Grid item md={6} xs={12} display={{ lg: 'flex', md: 'none' }} justifyContent={'end'}>
             <Box sx={{
-              width: { lg: '640px', md: '400px' },
+              width: { lg: '540px', md: '400px' },
+              marginBottom: '-43px !important',
               position: 'absolute',
               right: 0,
               bottom: 0,
             }}>
-              {/* <Carousel 
-                responsive={responsive}
-                arrows={true}
-                infinite={true}
-                ref={(el) => (mainCarousel.current = el)}
-                afterChange={handleAfterCarouselChg}
-              >
-                {
-                  imageItems.map((item, i) => (
-                    <Box key={i} mx={2}
-                      sx={{
-                        position: 'relative',
-                        height: { lg: currentSlide + 1 === i || currentSlide - 3 === i ? '250px' : '210px', xs: '210px'},
-                        opacity: { lg: currentSlide + 1 === i || currentSlide - 3 === i ? 1 : 0.8, xs: 1 },
-                        width: '100%',
-                      }}
-                    >
-                      <Box component={'img'} src={item.url.src} alt='' sx={{
-                        width: '100%',
-                        height: '100%',
-                        marginTop: { lg: currentSlide + 1 === i || currentSlide - 3 === i ? '0px' : '40px', xs: '0' },
-                      }} />
-                      <Typography variant='h4' sx={{
-                        position: 'absolute',
-                        display: { lg: 'block', xs: 'none' },
-                        bottom: currentSlide + 1 === i || currentSlide - 3 === i ? '15px' : '-24px',
-                        left: '60px',
-                        fontWeight: 700,
-                      }}>Concept . {item.concept}</Typography>
-                      <Typography variant='h4' sx={{
-                        display: { lg: 'block', xs: 'none' },
-                        position: 'absolute',
-                        top: currentSlide + 1 === i || currentSlide - 3 === i ? '20px' : '70px',
-                        left: '30px',
-                        fontWeight: 700,
-                      }}>0{i+1}</Typography>
-                    </Box>
-                  ))
-                }
-              </Carousel> */}
+              <DCarousel data={data} title='downtown' />
             </Box>
           </Grid>
         </Grid>

@@ -5,8 +5,10 @@ import {
   FeaturedApartments,
   PopularAreas,
   DowntownDubai,
-  // OffPlanProperties,
+  OffPlanProperties,
 } from '../../components/home'
+import Footer from '@/components/footer/Footer'
+import { Subscribe } from '@/components/Subscribe'
 
 export default function HomePage () {
   return (
@@ -17,7 +19,9 @@ export default function HomePage () {
       <FeaturedApartments />
       <PopularAreas />
       <DowntownDubai />
-      {/* <OffPlanProperties /> */}
+      <OffPlanProperties />
+      <Subscribe />
+      <Footer />
     </Box>
   )
 }

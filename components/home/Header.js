@@ -118,12 +118,17 @@ export const Header = () => {
                         }}>
                           {item.name}
                         </Typography>
-                        <Typography variant="h3" sx={{
-                          color: '#7b7b7b !important',
-                          fontWeight: 500,
-                        }}>
-                          {item.info}
-                        </Typography>
+                        <OutlinedInput
+                          placeholder={`${item.info}`}
+                          sx={{
+                            '& fieldset': { border: 'none' },
+                            '& input': { padding: '0px' },
+                            fontSize: 18,
+                            width: '100%',
+                            color: '#7b7b7b !important',
+                            fontWeight: 500,
+                          }}
+                        />
                       </Box>
                     </Box>
                   ))
