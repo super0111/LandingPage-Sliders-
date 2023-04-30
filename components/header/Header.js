@@ -42,10 +42,10 @@ const Header = () => {
     }
     let classname = router.pathname === "/product" ?`bg-${bg}`:'bg-black'
     return (
-        <header className={`flex items-center justify-between py-4 px-[30px] w-full z-1000 ${classname}`}>
+        <header className={`flex items-center justify-between py-4 px-[30px] w-full z-1000 ${classname}`} style={{ backgroundColor: 'black !important' }}>
             <Link href="/">
                 <span className="text-2xl leading-6 text-white font-bold uppercase font-CormorantGaramond">
-                    Delattio
+                    Delattiodsfsdf
                 </span>
             </Link>
             <div className="hidden xl:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
