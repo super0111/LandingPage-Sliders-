@@ -5,19 +5,7 @@ import { Box, Typography, Button } from "@mui/material";
 import Carousel from "./Carousel";
 import { palette } from "@/themes";
 
-const header_data =[
-  {
-    img:'/images/Header.png',
-  },
-  {
-    img:'/images/Header.png',
-  },
-  {
-    img:'/images/Header.png',
-  }
-]
-
-const CarouselArray = ({data, title}) => {
+const CarouselArray = ({data, title, status}) => {
     const [imgIndex,setImgIndex] = useState(0)
 
     const feSettings = {
@@ -31,68 +19,69 @@ const CarouselArray = ({data, title}) => {
       beforeChange: (current, next) => setImgIndex(next), 
       arrows:false,
       responsive:[
-          {
-            breakpoint: 1920,
-            settings: {
-                className: 'center',
-                centerMode: true,
-                slidesToShow: 1,
-                slidesToShow: 1,
-                centerPadding: '485px',
-            }
-          },
-          {
-            breakpoint: 1550,
-            settings: {
-                className: 'center',
-                centerMode: true,
-                slidesToShow: 1,
-                slidesToShow: 1,
-                centerPadding: '385px',
-            }
-          },
-          {
-              breakpoint: 1440,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '405px',
-              }
-          },
-          {
-              breakpoint: 1366,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '295px',
-              }
-          },
-          {
-              breakpoint: 1280,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '285px',
-              }
-          },
-          {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '245px',
-              }
-          },
-          {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '145px',
-              }
-          },
-          {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '0',
-              }
+        {
+          breakpoint: 1920,
+          settings: {
+              className: 'center',
+              centerMode: true,
+              slidesToShow: 1,
+              slidesToShow: 1,
+              centerPadding: '485px',
           }
+        },
+        {
+          breakpoint: 1550,
+          settings: {
+              className: 'center',
+              centerMode: true,
+              slidesToShow: 1,
+              slidesToShow: 1,
+              centerPadding: '385px',
+          }
+        },
+        {
+            breakpoint: 1440,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '405px',
+            }
+        },
+        {
+            breakpoint: 1366,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '295px',
+            }
+        },
+        {
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '285px',
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '245px',
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '185px',
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '20px',
+              initialSlide: 1,
+            }
+        }
       ]
     };
 
@@ -107,7 +96,7 @@ const CarouselArray = ({data, title}) => {
                 <Box className={className}>
                   <Carousel data={item.items} title="arrayCarousel" />
                 </Box>
-                <Box sx={{
+                <Box display={ status === 'villas' ? 'none' : 'block' } sx={{
                   position: 'absolute',
                   top: { sm: '25px', xs: '16px'},
                   left: { sm: '30px', xs: '18px' },
@@ -122,10 +111,13 @@ const CarouselArray = ({data, title}) => {
                 </Box>
                 <Box mt={2}>
                   <Typography variant='h4'>{item.title}</Typography>
-                  <Typography variant='h6' my={2}>{item.details}</Typography>
+                  <Typography variant='h6' mt={2}>{item.details}</Typography>
                   <Box display={'flex'} alignItems={'center'}>
                     <Typography variant='h4'>AED</Typography>  
-                    <Typography variant='h6' ml={2}>{item.AED}</Typography>
+                    <Typography variant='h6' ml={2} mb={2} sx={{
+                      fontFamily: 'Cormorant Garamond',
+                      fontSize: 20,
+                    }}>{item.AED}</Typography>
                   </Box>
                 </Box>
             </div>

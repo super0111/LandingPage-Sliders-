@@ -15,10 +15,10 @@ const propertyItems = [
 
 export const OffPlanProperties = () => {
   return (
-    <Box py={12} px={4}>
+    <Box py={10} px={4} className='offPlan'>
       <Typography variant="h2" mb={8} sx={{
         textAlign: { sm: 'center', xs: 'left' },
-        fontSize: { sm: 42, xs: 36 },
+        fontSize: { sm: 42, xs: 32 },
       }}>
         Off-Plan properties
       </Typography>
@@ -32,18 +32,19 @@ export const OffPlanProperties = () => {
             <Box key={i} sx={{
               position: 'relative',
               margin: { xs: '0 5px', sm: 0 },
-              width: { sx:"100%", sm: '205px', xs: '250px' },
+              width: { xs:"300px", sm: '205px', xs: '300px' },
               flex: 'none',
+              opacity: { sm: 0.3, xs: 0.8 },
+              transition: 'width 0.5s',
+              '&: hover': {
+                opacity: 1,
+                width: { xs:"300px", sm: '235px', xs: '300px' },
+              }
             }}>
               <Box component={'img'} mx={1} src={item.url.src} alt="" sx={{
                 height: '450px',
                 width: '100%',
                 marginTop: { sm: i === 0 ? 0 : i === 1? '40px' : i === 2 ? '20px' : i === 3 ? '40px' : 0, xs: 0 },
-                transition: 0.5,
-                opacity: 0.3,
-                '&: hover': {
-                  opacity: 1,
-                }
               }} />
               <Typography variant="h4" sx={{
                 maxWidth: '80%',
@@ -51,7 +52,7 @@ export const OffPlanProperties = () => {
                 left: '9%',
                 top: { xs: 'initial', sm: '45%'},
                 bottom: { xs: '20px', sm: 'initial'},
-                textAlign: 'center',
+                textAlign: { sm: 'center', xs: 'left' },
               }}>
                 {item.text}
               </Typography>

@@ -121,7 +121,7 @@ const Carousel = ({ data, title }) => {
               src={item.img}
               className={`object-cover w-full ${
                 title === "header" ?
-                  "h-[600px] md:h-[800px] sm:h-[800px]"
+                  "h-[500px] lg:h-[800px] md:h-[670px] sm:h-[550px]"
                   :title === "banner"
                     ? "h-[1113px]"
                     : title === "Search"

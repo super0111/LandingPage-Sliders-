@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <footer className="flex flex-col">
-            <div className="flex items-start flex-col gap-6 lg:flex-row justify-between px-6 md:px-[70px] py-[105px]">
+            <div className="flex items-start flex-col gap-6 lg:flex-row justify-between px-6 md:px-[40px] py-[80px] sm:py-[105px]">
                 <div className="flex flex-col gap-5 w-full lg:max-w-[323px]">
                     <span className="text-2xl leading-6 text-white font-bold uppercase font-CormorantGaramond">
                         Delattio

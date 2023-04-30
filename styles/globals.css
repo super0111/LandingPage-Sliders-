@@ -23,6 +23,13 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url(../assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf) format('Cormorant Garamond');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+  }
+
 
 .video-tour {
    z-index: 1;
@@ -303,20 +310,13 @@ select option {
 .featuredApartments .slick-next::before {
     font-size: 30px;
 }
-
-.popularAreas .slick-prev {
-    display: none !important;
+.offPlan ::-webkit-scrollbar {
+    display: none;
 }
+  
+.popularAreas .slick-prev,
 .popularAreas .slick-next {
-    right: 15px;
-    z-index: 100;
-    top: 0%;
-}
-.popularAreas .slick-prev::before,
-.popularAreas .slick-next::before,
-.downtown .slick-prev::before,
-.downtown .slick-next::before {
-    font-size: 30px;
+    display: none !important;
 }
 
 .downtown .slick-prev {

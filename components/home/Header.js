@@ -31,13 +31,13 @@ export const Header = () => {
     <Box 
       sx={{
         position: 'relative',
-        height: { md: '780px', sm: '650px', xs: '550px' },
+        height: { md: '780px', sm: '650px', xs: '460px' },
       }}
     >
       <Carousel data={header_data} title="header" />
-      <Box px={{ sm: 8, xs: 4 }} width={'100%'} sx={{
+      <Box px={{ sm: 4, xs: 2 }} width={'100%'} sx={{
         position: 'absolute',
-        top: '250px'
+        top: { sm: '250px', xs: '120px'}
       }}>
         <Box sx={{
           maxWidth: '1400px',

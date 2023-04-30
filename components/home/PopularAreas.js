@@ -28,12 +28,12 @@ const data =[
 export const PopularAreas = () => {
 
   return (
-    <Box my={24} className='popularAreas' sx={{
+    <Box pt={{ sm: 12, xs: 2 }} className='popularAreas' sx={{
       maxWidth: '1400px',
       margin: 'auto',
     }}>
       <Grid container spacing={4} width={'100%'}>
-        <Grid item md={4} sm={4} xs={12} display={'flex'} alignItems={'center'} pr={4}>
+        <Grid item md={4} sm={4} xs={12} display={{ sm: 'flex', xs: 'none'}} alignItems={'center'} pr={4}>
           <Box display={'flex'} flexDirection={'column'} gap={4} mt={8} width={{ md: '80%', xs: '100%'}}>
             <Typography variant='h2'>Popular Areas</Typography>
             <Typography variant='h6'>As well as being positioned on one of the exclusive Fronds of Palm Jumeirah.</Typography>

@@ -60,7 +60,7 @@ const featuredApartments = [
   },
 ]
 
-export const FeaturedApartments = () => {
+export const FeaturedVillas = () => {
   return (
     <Box py={{ sm: 16, xs: 2 }} className='featuredApartments' sx={{
       maxWidth: '1400px',
@@ -80,7 +80,7 @@ export const FeaturedApartments = () => {
           </Box>
         </Grid>
       </Grid>
-      <CarouselArray data={featuredApartments} title="villa" />  
+      <CarouselArray data={featuredApartments} title="villa" status='villas' />  
     </Box>
   )
 }

@@ -117,7 +117,7 @@ const DCarousel = ({data, title}) => {
                 breakpoint: 1540,
                 settings: {
                  slidesToShow: 1,
-                 centerPadding: '315px',
+                 centerPadding: '300px',
                 }
             },
             {

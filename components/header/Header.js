@@ -41,7 +41,7 @@ const Header = () => {
     }
     let classname = router.pathname === "/product" ?`bg-${bg}`:'bg-black'
     return (
-        <header className={`fixed flex items-center justify-between py-4 px-[30px] w-full z-100 ${classname}`}>
+        <header className={`flex items-center justify-between py-4 px-[30px] w-full z-100 ${classname}`}>
             <Link href="/">
                 <span className="text-2xl leading-6 text-white font-bold uppercase font-CormorantGaramond">
                     Delattio
@@ -68,9 +68,9 @@ const Header = () => {
                     value={selected}
                     data={item}
                     setSelected={setSelected}
-                    className={`flex items-center gap-2.5 px-3 justify-center text-center border-x border-y border-solid rounded-[10px] text-white text-xl h-11 font-bold ${roboto.className}`} />
+                    className={`flex items-center gap-2.5 px-3 justify-center text-center border-white border-x border-y border-solid rounded-[10px] text-white text-xl h-11 font-bold ${roboto.className}`} />
                 <button
-                    className={`flex items-center justify-center border-x border-y border-solid rounded-[10px] text-white text-xl h-11 font-normal py-2 px-6 ${roboto.className}`}>
+                    className={`flex items-center justify-center border-white border-x border-y border-solid rounded-[10px] text-white text-xl h-11 font-normal py-2 px-6 ${roboto.className}`}>
                     Sign In
                 </button>
             </div>

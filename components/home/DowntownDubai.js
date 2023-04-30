@@ -21,7 +21,7 @@ export const DowntownDubai = () => {
 
   return (
     <Box 
-      display={'flex'} 
+      display={{ sm: 'flex', xs: 'none' }} 
       justifyContent={'space-between'} 
       alignItems={'center'}
       className='downtown'
