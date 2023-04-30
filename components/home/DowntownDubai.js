@@ -42,10 +42,15 @@ export const DowntownDubai = () => {
       }}>
         <Grid container spacing={2}>
           <Grid item md={6} xs={12} mt={{ md: 38, xs: 12 }}>
-            <Typography variant="h3" mb={4}>Modern Architecture</Typography>
+            <Typography variant="h3" mb={4} sx={{
+              fontSize: 18, 
+              fontFamily: 'Cormorant Garamond',
+            }}>Modern Architecture</Typography>
             <Typography variant="h1" mb={8} sx={{
               maxWidth: { md: '90%', xs: '100%' },
               fontSize: { sm: 42, xs: 36 },
+              fontFamily: 'Cormorant Garamond',
+              fontWeight: 600,
             }}>
               DOWNTOWN DUBAI VILLA
             </Typography>
@@ -53,6 +58,7 @@ export const DowntownDubai = () => {
               background: `${palette.common.white} !important`,
               color: palette.common.black,
               fontSize: 14,
+              fontWeight: 500,
               borderRadius: '999px !important',
               padding: '14px 32px',
             }}>

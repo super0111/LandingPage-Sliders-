@@ -18,7 +18,8 @@ export const Subscribe = () => {
             alignItems={{ md: 'start', xs: 'center' }}
           >
             <Typography variant="h2" sx={{
-              fontSize: { sm: 36, xs: 24 },
+              fontSize: { sm: 36, xs: 28 },
+              fontFamily: 'Cormorant Garamond',
             }}>Stay Blingy!</Typography>
             <Typography variant="h3" mt={4} sx={{
               fontWeight: 400,

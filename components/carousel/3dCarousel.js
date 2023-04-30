@@ -86,7 +86,7 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                 breakpoint: 600,
                 settings: {
                  slidesToShow: 1,
-                 centerPadding: '0',
+                 centerPadding: '50px',
                 }
             }
         ]
@@ -240,7 +240,7 @@ const DCarousel = ({data, title, setSelectedBg}) => {
       };
 
 
-    const className=title==="journal"?"h-[200px] xl:h-[296px] w-full object-cover":"w-full object-cover";
+    const className=title==="journal"?"h-[100px] xl:h-[296px] w-full object-cover":"w-full object-cover";
     const slideClass =title==="journal"?"dslide relative activeSlide":"relative";
 
     return ( 
@@ -248,7 +248,7 @@ const DCarousel = ({data, title, setSelectedBg}) => {
          <Slider {...title==="journal"?settings:title==='popular'?popularSettings:title==='downtown'?downtownSettings:feSettings}>
             {data.map((item, idx) => (
                 <div key={idx} className={idx === imgIndex ? slideClass : "dslide"}>   
-                    <img 
+                    <Box component={'img'} 
                         src={item.img}
                         alt={idx}
                         className={className}
@@ -277,8 +277,14 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                             bottom: '15px',
                             left: '30px',
                         }}>
-                            <Typography variant='h4'>{item.text1}</Typography>
-                            <Typography variant='h4'>{item.text2}</Typography>
+                            <Typography variant='h4' sx={{
+                                fontFamily: 'Cormorant Garamond',
+                                fontWeight: 500,
+                            }}>{item.text1}</Typography>
+                            <Typography variant='h4' sx={{
+                              fontFamily: 'Cormorant Garamond',
+                              fontWeight: 500,
+                            }}>{item.text2}</Typography>
                         </Box> 
                     }
                     {title === 'downtown' &&
@@ -298,34 +304,6 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                                 fontWeight: 700,
                                 zIndex: 100
                             }}>0{idx+1}</Typography>
-                        </Box>
-                    }
-                    {title === 'offPlan' &&
-                        <Typography variant="h4" sx={{
-                            maxWidth: '80%',
-                            position: 'absolute',
-                            left: '9%',
-                            bottom: { xs: '30px', sm: 'initial'},
-                            textAlign: { sm: 'center', xs: 'left' },
-                        }}>
-                            {item.text}
-                        </Typography>
-                    }
-                    {title === 'ourJournal' &&
-                        <Box mt={6} mx={2}>
-                            <Typography variant='h4' sx={{
-                                fontFamily: 'Cormorant Garamond',
-                                fontSize: 20,
-                                fontWeight: 500,
-                            }}>{item.title}</Typography>
-                            <Typography variant='h6' my={2} sx={{ 
-                                color: '#bcbbbb', 
-                                fontFamily: 'Cormorant Garamond',
-                                fontSize: 20,
-                                lineHeight: 1.3,
-                            }}>{item.details}</Typography>
-                            <Typography variant='h4' mt={4} sx={{ color: '#bcbbbb' }}>{item.portfolio}</Typography>  
-                            <Typography variant='h6' sx={{ color: '#bcbbbb' }}>{item.date}</Typography>
                         </Box>
                     }
                 </div>

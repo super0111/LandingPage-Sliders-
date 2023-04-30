@@ -8,7 +8,7 @@ const SimilarProperty = () => {
             <div className="pl-6 md:pl-[87px]">
                 <ProductTitle text="Similar Properties" />
             </div>
-            <SimilarCarousel data={data} />
+            <SimilarCarousel data={data} title='similarProperty' />
         </div>
     );
 }

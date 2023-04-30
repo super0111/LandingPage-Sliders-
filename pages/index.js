@@ -36,7 +36,8 @@ export default function Home() {
       >
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
           fontSize: { sm: 32, xs: 24 },
-          maxWidth: '100%'
+          maxWidth: '100%',
+          fontFamily: 'Cormorant Garamond',
         }}>Featured Properties</Typography>
         <Box display={{ sm: 'none', xs: 'flex'}} alignItems={'center'} my={4}>
           <Typography 
@@ -75,6 +76,7 @@ export default function Home() {
       }}>
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
           fontSize: 24,
+          fontFamily: 'Cormorant Garamond',
           maxWidth: '100%'
         }}>Featured Villas</Typography>
         <Box display={{ sm: 'none', xs: 'flex'}} alignItems={'center'} my={4}>
@@ -101,10 +103,12 @@ export default function Home() {
       <Box display={{ sm: 'none', xs: 'block' }} mt={4} pt={8} px={4} sx={{
         borderTop: '2px solid #292929',
         borderBottom: '2px solid #292929',
+        fontFamily: 'Cormorant Garamond',
       }}>
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
           fontSize: 24,
-          maxWidth: '100%'
+          maxWidth: '100%',
+          fontFamily: 'Cormorant Garamond',
         }}>Our Journals</Typography>
         <OurJournals />
       </Box>

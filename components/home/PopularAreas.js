@@ -35,9 +35,15 @@ export const PopularAreas = () => {
       <Grid container spacing={4} width={'100%'}>
         <Grid item md={4} sm={4} xs={12} display={{ sm: 'flex', xs: 'none'}} alignItems={'center'} pr={4}>
           <Box display={'flex'} flexDirection={'column'} gap={4} mt={8} width={{ md: '80%', xs: '100%'}}>
-            <Typography variant='h2'>Popular Areas</Typography>
-            <Typography variant='h6'>As well as being positioned on one of the exclusive Fronds of Palm Jumeirah.</Typography>
-            <Typography variant='h6'>It now features the architectural talents of Chakib Richani, att from the Tabari Gallery and a host of unique touches including Flos lighting and furniture from Minotti, Poltrona Frau, Bocci and Giorgetti.</Typography>
+            <Typography variant='h2' sx={{
+              fontFamily: 'Cormorant Garamond',
+            }}>Popular Areas</Typography>
+            <Typography variant='h6' sx={{
+              fontFamily: 'Cormorant Garamond',
+            }}>As well as being positioned on one of the exclusive Fronds of Palm Jumeirah.</Typography>
+            <Typography variant='h6' sx={{
+              fontFamily: 'Cormorant Garamond',
+            }}>It now features the architectural talents of Chakib Richani, att from the Tabari Gallery and a host of unique touches including Flos lighting and furniture from Minotti, Poltrona Frau, Bocci and Giorgetti.</Typography>
           </Box>
         </Grid>
         <Grid item md={8} sm={8} xs={12} pr={{ sm: 4, xs: 0 }} sx={{

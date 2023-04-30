@@ -105,17 +105,18 @@ const CarouselArray = ({data, title, status}) => {
                     background: `${palette.common.white} !important`,
                     color: `${palette.common.black} !important`,
                     padding: '4px 16px',
-                    fontSize: 14,
-                    fontWeight: 500,
+                    fontSize: 16,
+                    fontWeight: 600,
+                    fontFamily: 'Cormorant Garamond',
                   }}>Featured</Button>
                 </Box>
                 <Box mt={2}>
                   <Typography variant='h4' sx={{
-                    fontSize: 20,
+                    fontSize: 18,
                     fontFamily: 'Cormorant Garamond',
                   }}>{item.title}</Typography>
                   <Typography variant='h6' mt={2} sx={{
-                    fontSize: 15,
+                    fontSize: 14,
                   }}>{item.details}</Typography>
                   <Box display={'flex'} alignItems={'center'}>
                     <Typography variant='h4' sx={{

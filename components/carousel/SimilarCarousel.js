@@ -1,10 +1,12 @@
 import React,{useRef,useState} from "react";
 import Slider from "react-slick";
-const SimilarCarousel = ({data}) => {
+import { Box, Typography } from "@mui/material";
+
+const SimilarCarousel = ({data, title}) => {
     const [current, setCurrent] = useState(0);
     const slider = useRef()
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -49,25 +51,124 @@ const SimilarCarousel = ({data}) => {
         },
        
       };
+
+    const settings1 = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        arrows:false,
+        autoplay: false,
+        responsive:[
+            {
+                breakpoint: 1920,
+                settings: {
+                 slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1280,
+                settings: {
+                 slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                 slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint:768,
+                settings: {
+                 slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 1,
+                }
+            }
+        ],
+        beforeChange:(prevIndex, newIndex)=>{
+            setCurrent(newIndex)
+        },
+       
+      };
+
     return ( 
         <div className="block">
-            <Slider {...settings} ref={slider}>
+            <Slider {... title==='similarProperty' ? settings : settings1 } ref={slider}>
                 {
                     data.map((item,index)=>(
-                        <div className="px-7 relative" key={index}>
-                            <img 
+                        <Box px={ title === 'similarProperty' ? 7 : 2 } key={index} sx={{
+                            position: 'relative'
+                        }}>
+                            {
+                                title === 'similarProperty' &&
+                                <Box component={'img'} 
+                                    alt="property"
+                                    src={"/images/product/02.avif"} 
+                                />
+                            }
+                            <Box component={'img'} 
                                 alt="property" 
-                                src={"/images/product/02.avif"} 
-                             />
-                             <div className="absolute bottom-7 right-10 flex flex-col">
-                                <span className="font-sans font-medium text-white text-lg uppercase">
-                                    Downtown Dubai Penthouse
-                                </span>
-                                <span className="font-sans font-medium text-white text-sm text-opacity-70 leading-[10px] uppercase">
-                                    Downtown Dubai Penthouse
-                                </span>
-                             </div>
-                        </div>
+                                src={item.img} 
+                                sx={{
+                                    width: '100%',
+                                    height: '420px',
+                                    opacity: 0.7,
+                                }}
+                            />
+                             {
+                                title === 'similarProperty' &&
+                                    <div className="absolute bottom-7 right-10 flex flex-col">
+                                        <span className="font-sans font-medium text-white text-lg uppercase">
+                                            Downtown Dubai Penthouse
+                                        </span>
+                                        <span className="font-sans font-medium text-white text-sm text-opacity-70 leading-[10px] uppercase">
+                                            Downtown Dubai Penthouse
+                                        </span>
+                                    </div>
+                             }
+                              {
+                                title === 'offPlan' &&
+                                    <Typography variant="h4" sx={{
+                                        maxWidth: '80%',
+                                        position: 'absolute',
+                                        left: '40px',
+                                        fontSize: 18,
+                                        fontWeight: 600,
+                                        bottom: { xs: '30px', sm: 'initial'},
+                                        textAlign: { sm: 'center', xs: 'left' },
+                                        fontFamily: 'Cormorant Garamond',
+                                    }}>
+                                        {item.text}
+                                    </Typography>
+                                }
+                                {title === 'ourJournal' &&
+                                    <Box mt={6} mx={2}>
+                                        <Typography variant='h4' sx={{
+                                            fontFamily: 'Cormorant Garamond',
+                                            fontSize: 20,
+                                            fontWeight: 500,
+                                        }}>{item.title}</Typography>
+                                        <Typography variant='h6' my={2} sx={{ 
+                                            color: '#bcbbbb', 
+                                            fontFamily: 'Cormorant Garamond',
+                                            fontSize: 20,
+                                            lineHeight: 1.3,
+                                        }}>{item.details}</Typography>
+                                        <Typography variant='h4' mt={4} sx={{ 
+                                            color: '#bcbbbb',
+                                            fontSize: 14,
+                                        }}>{item.portfolio}</Typography>  
+                                        <Typography variant='h6' sx={{ color: '#bcbbbb' }}>{item.date}</Typography>
+                                    </Box>
+                                }
+                        </Box>
                     ))
                 }
             </Slider>

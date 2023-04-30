@@ -70,13 +70,18 @@ export const FeaturedApartments = () => {
         <Grid item xs={12} sm={6} display={'flex'} alignItems={'center'}>
           <Typography variant='h2' sx={{
             fontSize: { sm: 42, xs: 24 },
-            maxWidth: { sm: '30%', xs: '100%' }
+            maxWidth: { sm: '30%', xs: '100%' },
+            fontFamily: 'Cormorant Garamond',
           }}>Featured Apartments</Typography>
         </Grid>
         <Grid item xs={12} sm={6} display={'flex'} alignItems={'center'}>
           <Box display={'flex'} flexDirection={'column'} gap={4}>
-            <Typography variant='body2'>Dilatations International realty is excited to present the listing for this bespoke 4-bedroom Garden Homes villa on Frond N, Plam Jumeirah,</Typography>
-            <Typography variant='body2'>As well as being positioned on one of the exclusive Fronds of Plam Jumeirah, this exceptional Garden Homes villa has been expettly designed and fully customised to crete a dram luxury property.</Typography>
+            <Typography variant='body2' sx={{
+              fontFamily: 'Cormorant Garamond',
+            }}>Dilatations International realty is excited to present the listing for this bespoke 4-bedroom Garden Homes villa on Frond N, Plam Jumeirah,</Typography>
+            <Typography variant='body2' sx={{
+              fontFamily: 'Cormorant Garamond',
+            }}>As well as being positioned on one of the exclusive Fronds of Plam Jumeirah, this exceptional Garden Homes villa has been expettly designed and fully customised to crete a dram luxury property.</Typography>
           </Box>
         </Grid>
       </Grid>

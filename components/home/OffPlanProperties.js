@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material"
-
-import DCarousel from '../carousel/3dCarousel'
+import SimilarCarousel from "../carousel/SimilarCarousel"
 
 import image1 from '../../assets/images/Layer1.png'
 import image2 from '../../assets/images/Layer2.png'
@@ -24,13 +23,13 @@ const propertyItems1 = [
   { img: '/images/offPlan/Layer5.png', text: 'DOWNtown Dubai Penthouse' },
 ]
 
-
 export const OffPlanProperties = () => {
   return (
     <Box py={10} px={4} className='offPlan'>
       <Typography variant="h2" mb={8} sx={{
         textAlign: { sm: 'center', xs: 'left' },
         fontSize: { sm: 42, xs: 24 },
+        fontFamily: 'Cormorant Garamond',
       }}>
         Offplan Projects
       </Typography>
@@ -65,6 +64,8 @@ export const OffPlanProperties = () => {
                 top: { xs: 'initial', sm: '45%'},
                 bottom: { xs: '20px', sm: 'initial'},
                 textAlign: { sm: 'center', xs: 'left' },
+                fontFamily: 'Cormorant Garamond',
+                fontWeight: 600,
               }}>
                 {item.text}
               </Typography>
@@ -74,7 +75,7 @@ export const OffPlanProperties = () => {
       </Box>
 
       <Box display={{ sm: 'none', xs: 'block' }}>
-        <DCarousel data={propertyItems1} title='offPlan' />
+        <SimilarCarousel data={propertyItems1} title='offPlan' />
       </Box>
 
     </Box>
