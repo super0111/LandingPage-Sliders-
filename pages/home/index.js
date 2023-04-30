@@ -34,7 +34,7 @@ export default function HomePage () {
         px={{ sm: 0, xs: 4}}
       >
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
-          fontSize: 32,
+          fontSize: 24,
           maxWidth: '100%'
         }}>Featured Properties</Typography>
         <Box display={{ sm: 'none', xs: 'flex'}} alignItems={'center'} my={4}>
@@ -73,7 +73,7 @@ export default function HomePage () {
         borderTop: '2px solid #292929',
       }}>
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
-          fontSize: 32,
+          fontSize: 24,
           maxWidth: '100%'
         }}>Featured Villas</Typography>
         <Box display={{ sm: 'none', xs: 'flex'}} alignItems={'center'} my={4}>
@@ -102,7 +102,7 @@ export default function HomePage () {
         borderBottom: '2px solid #292929',
       }}>
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
-          fontSize: 32,
+          fontSize: 24,
           maxWidth: '100%'
         }}>Our Journals</Typography>
         <OurJournals />

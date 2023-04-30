@@ -69,7 +69,7 @@ export const FeaturedVillas = () => {
       <Grid container spacing={4} mb={12} width={'100%'} display={{ sm: 'flex', xs: 'none' }}>
         <Grid item xs={12} sm={6} display={'flex'} alignItems={'center'}>
           <Typography variant='h2' sx={{
-            fontSize: { sm: 42, xs: 32 },
+            fontSize: { sm: 42, xs: 24 },
             maxWidth: { sm: '30%', xs: '100%' }
           }}>Featured Apartments</Typography>
         </Grid>

@@ -18,10 +18,11 @@ export const Subscribe = () => {
             alignItems={{ md: 'start', xs: 'center' }}
           >
             <Typography variant="h2" sx={{
-              fontSize: { sm: 36, xs: 28 },
+              fontSize: { sm: 36, xs: 24 },
             }}>Stay Blingy!</Typography>
             <Typography variant="h3" mt={4} sx={{
-              color: '#a7a1a1',
+              fontWeight: 400,
+              fontFamily: '__Roboto_58f936,__Roboto_Fallback_58f936',
               textAlign: { lg: 'center', sm: 'left', xs: 'center'},
             }}>
               Subscribe to our news letter and get latest market prices

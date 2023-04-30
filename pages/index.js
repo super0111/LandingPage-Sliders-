@@ -35,14 +35,14 @@ export default function Home() {
         px={{ sm: 0, xs: 4}}
       >
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
-          fontSize: 32,
+          fontSize: { sm: 32, xs: 24 },
           maxWidth: '100%'
         }}>Featured Properties</Typography>
         <Box display={{ sm: 'none', xs: 'flex'}} alignItems={'center'} my={4}>
           <Typography 
             variant='h4' 
             sx={{
-              fontSize: 16,
+              fontSize: 14,
               maxWidth: '100%',
               opacity: properties === 'apartments' ? 1 : 0.7, 
               zIndex: 100
@@ -52,7 +52,7 @@ export default function Home() {
           <Typography 
             variant='h4' ml={8} 
             sx={{
-              fontSize: 16,
+              fontSize: 14,
               maxWidth: '100%',
               opacity: properties === 'popular' ? 1 : 0.7, 
               zIndex: 100
@@ -74,7 +74,7 @@ export default function Home() {
         borderTop: '2px solid #292929',
       }}>
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
-          fontSize: 32,
+          fontSize: 24,
           maxWidth: '100%'
         }}>Featured Villas</Typography>
         <Box display={{ sm: 'none', xs: 'flex'}} alignItems={'center'} my={4}>
@@ -103,7 +103,7 @@ export default function Home() {
         borderBottom: '2px solid #292929',
       }}>
         <Typography display={{sm: 'none', xs: 'block'}} variant='h2' sx={{
-          fontSize: 32,
+          fontSize: 24,
           maxWidth: '100%'
         }}>Our Journals</Typography>
         <OurJournals />

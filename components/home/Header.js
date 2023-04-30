@@ -81,7 +81,7 @@ export const Header = () => {
             <Grid item md={6} xs={12} mt={{ sm: 8, xs: 0 }}>
               <Typography variant="h1" mb={{ sm: 12, xs: 4 }} sx={{
                 maxWidth: { sm: '90%', xs: '100%' },
-                fontSize: { lg: 62, md: 50, xs: 32},
+                fontSize: { lg: 62, md: 50, sm: 32, xs: 24 },
               }}>
                 Dubai dominates as top choice for UHNW primary residents
               </Typography>
@@ -90,7 +90,7 @@ export const Header = () => {
                 color: palette.common.black,
                 borderRadius: '8px !important',
                 padding: '8px 32px',
-                fontSize: 16,
+                fontSize: { sm: 16, xs: 14 },
                 fontWeight: 600,
               }}>
                 Learn More

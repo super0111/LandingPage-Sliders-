@@ -18,7 +18,7 @@ export const OffPlanProperties = () => {
     <Box py={10} px={4} className='offPlan'>
       <Typography variant="h2" mb={8} sx={{
         textAlign: { sm: 'center', xs: 'left' },
-        fontSize: { sm: 42, xs: 32 },
+        fontSize: { sm: 42, xs: 24 },
       }}>
         Offplan Projects
       </Typography>
@@ -38,7 +38,7 @@ export const OffPlanProperties = () => {
               transition: 'width 0.5s',
               '&: hover': {
                 opacity: 1,
-                width: { xs:"96.8%", sm: '235px' },
+                width: { xs:"96.8%", sm: '225px' },
               }
             }}>
               <Box component={'img'} mx={1} src={item.url.src} alt="" sx={{

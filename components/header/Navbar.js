@@ -46,7 +46,7 @@ const Navbar = ({
     }, [open])
     return (
         <>
-            {open && <div className="absolute right-0 left-0 top-0 flex xl:hidden flex-col h-screen w-full bg-black z-1000 overflow-hidden">
+            {open && <div className="absolute right-0 left-0 top-0 flex xl:hidden flex-col h-screen w-full bg-black z-[1000] overflow-hidden">
                 <div className="flex items-center justify-between py-4 px-[30px]">
                     <Link href="/">
                         <span className="text-2xl leading-6 text-white font-bold uppercase font-CormorantGaramond">
@@ -58,7 +58,7 @@ const Navbar = ({
 
                     </button>
                 </div>
-                <div className={`flex flex-col w-full relative right-0 transition ease-in-out ${animation?" -translate-x-full left-full":"translate-x-0 left-0"}`}>
+                <div className={`z-[1000] flex flex-col w-full relative right-0 transition ease-in-out ${animation?" -translate-x-full left-full":"translate-x-0 left-0"}`}>
                     <div className="h-0.5 w-full flex bg-[#1b1b1b]"></div>
                     <div className="flex items-center justify-between px-6 py-6">
                         {previousStep > 1 && <div className="flex items-center gap-2"

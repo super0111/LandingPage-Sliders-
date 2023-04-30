@@ -11,6 +11,7 @@ import menuIcon from "@/public/images/menu.svg";
 const Header = () => {
     const router = useRouter();
     const [menuOpen, setMenuOpen] = useState(false)
+    console.log("menuOpenmenuOpen", menuOpen)
     const item = [
         {
             title: "AED"
@@ -41,7 +42,7 @@ const Header = () => {
     }
     let classname = router.pathname === "/product" ?`bg-${bg}`:'bg-black'
     return (
-        <header className={`flex items-center justify-between py-4 px-[30px] w-full z-100 ${classname}`}>
+        <header className={`flex items-center justify-between py-4 px-[30px] w-full z-1000 ${classname}`}>
             <Link href="/">
                 <span className="text-2xl leading-6 text-white font-bold uppercase font-CormorantGaramond">
                     Delattio

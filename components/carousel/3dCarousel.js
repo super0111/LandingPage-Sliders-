@@ -253,7 +253,7 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                         alt={idx}
                         className={className}
                         style={{
-                            height: title==='downtown'?'260px':'initial',
+                            height: title==='downtown'?'245px':'initial',
                             marginTop: title==='downtown' && idx === imgIndex ?'-38px':'initial',
                         }}
                     />
@@ -290,7 +290,7 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                             <Typography variant='h4' sx={{
                                 display: { lg: 'block', xs: 'none' },
                                 position: 'absolute',
-                                top: '10px',
+                                top: '20px',
                                 left: '30px',
                                 fontWeight: 700,
                                 zIndex: 100
