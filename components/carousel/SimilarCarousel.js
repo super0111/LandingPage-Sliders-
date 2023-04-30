@@ -88,7 +88,7 @@ const SimilarCarousel = ({data, title}) => {
             {
                 breakpoint: 600,
                 settings: {
-                slidesToShow: 1,
+                slidesToShow: 1.1,
                 }
             }
         ],
@@ -153,19 +153,18 @@ const SimilarCarousel = ({data, title}) => {
                                         <Typography variant='h4' sx={{
                                             fontFamily: 'Cormorant Garamond',
                                             fontSize: 20,
-                                            fontWeight: 500,
+                                            fontWeight: 600,
                                         }}>{item.title}</Typography>
                                         <Typography variant='h6' my={2} sx={{ 
-                                            color: '#bcbbbb', 
                                             fontFamily: 'Cormorant Garamond',
                                             fontSize: 20,
+                                            fontWeight: 300,
                                             lineHeight: 1.3,
                                         }}>{item.details}</Typography>
                                         <Typography variant='h4' mt={4} sx={{ 
-                                            color: '#bcbbbb',
-                                            fontSize: 14,
+                                            fontSize: 12,
                                         }}>{item.portfolio}</Typography>  
-                                        <Typography variant='h6' sx={{ color: '#bcbbbb' }}>{item.date}</Typography>
+                                        <Typography variant='h6' sx={{ fontSize: 12 }}>{item.date}</Typography>
                                     </Box>
                                 }
                         </Box>

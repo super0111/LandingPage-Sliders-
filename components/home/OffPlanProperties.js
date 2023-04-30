@@ -31,7 +31,7 @@ export const OffPlanProperties = () => {
         fontSize: { sm: 42, xs: 24 },
         fontFamily: 'Cormorant Garamond',
       }}>
-        Offplan Projects
+        Off-Plan Projects
       </Typography>
       <Box mt={8} display={{ sm: 'flex', xs: 'none'}} justifyContent={'space-between'} sx={{
         width: { xs: '100%', sm: '620px', lg: '1100px'},

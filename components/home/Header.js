@@ -50,8 +50,8 @@ export const Header = () => {
             width={'100%'} 
             sx={{
               background: 'white',
-              padding: '6px 8px',
-              height: '56px',
+              padding: '6px 6px',
+              height: '50px',
               borderRadius: '999px',
               margin: { xs: '-50px 0 50px 0 !important', sm: '-100px 0 50px 0 !important', md: '0px 0 0 0 !important'},
             }}
@@ -60,7 +60,7 @@ export const Header = () => {
               placeholder='Area, development...'
               sx={{
                 '& fieldset': { border: 'none' },
-                '& input': { padding: '12px 14px' },
+                '& input': { padding: '8px 14px' },
                 fontSize: 16,
                 width: '100%',
               }}
