@@ -51,13 +51,13 @@ export const OurJournals = () => {
             <Box key={i} sx={{
               position: 'relative',
               margin: { xs: '0 5px', sm: 0 },
-              width: '300px',
+              width: '100%',
               flex: 'none',
 
             }}>
               <Box component={'img'} mx={1} src={item.url.src} alt="" sx={{
                 height: '340px',
-                width: '100%',
+                width: '96%',
                 '&: hover': {
                   opacity: 1,
                 },
@@ -65,7 +65,7 @@ export const OurJournals = () => {
                 transition: 'width 0.5s',
                 marginTop: { sm: i === 0 ? 0 : i === 1? '40px' : i === 2 ? '20px' : i === 3 ? '40px' : 0, xs: 0 },
               }} />
-              <Box mt={6}>
+              <Box mt={6} mx={2}>
                 <Typography variant='h4'>{item.title}</Typography>
                 <Typography variant='h6' my={2} sx={{ color: '#9c9c9c' }}>{item.details}</Typography>
                 <Typography variant='h4' sx={{ color: '#9c9c9c' }}>{item.portfolio}</Typography>  

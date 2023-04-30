@@ -40,7 +40,9 @@ export const PopularAreas = () => {
             <Typography variant='h6'>It now features the architectural talents of Chakib Richani, att from the Tabari Gallery and a host of unique touches including Flos lighting and furniture from Minotti, Poltrona Frau, Bocci and Giorgetti.</Typography>
           </Box>
         </Grid>
-        <Grid item md={8} sm={8} xs={12} pr={4}>
+        <Grid item md={8} sm={8} xs={12} pr={{ sm: 4, xs: 0 }} sx={{
+          paddingLeft: { sm: '16px', xs: '0px !important' }
+        }}>
           <DCarousel data={data} title={'popular'} />
         </Grid>
       </Grid>

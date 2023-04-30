@@ -11,7 +11,7 @@ const featuredApartments = [
       { img: "/images/villa/02.png" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
-    details: 'PENTHOUSE 3 BED 13,00 SQ.FT READY',
+    details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
     AED: '144,220,00',
   },
   {
@@ -22,7 +22,7 @@ const featuredApartments = [
       { img: "/images/villa/02.png" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
-    details: 'PENTHOUSE 3 BED 13,00 SQ.FT READY',
+    details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
     AED: '144,220,00',
   },
   {
@@ -33,7 +33,7 @@ const featuredApartments = [
       { img: "/images/villa/02.png" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
-    details: 'PENTHOUSE 3 BED 13,00 SQ.FT READY',
+    details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
     AED: '144,220,00',
   },
   {
@@ -44,7 +44,7 @@ const featuredApartments = [
       { img: "/images/villa/02.png" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
-    details: 'PENTHOUSE 3 BED 13,00 SQ.FT READY',
+    details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
     AED: '144,220,00',
   },
   {
@@ -55,7 +55,7 @@ const featuredApartments = [
       { img: "/images/villa/02.png" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
-    details: 'PENTHOUSE 3 BED 13,00 SQ.FT READY',
+    details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
     AED: '144,220,00',
   },
 ]

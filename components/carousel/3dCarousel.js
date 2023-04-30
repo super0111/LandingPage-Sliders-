@@ -2,8 +2,8 @@ import React ,{useState} from "react";
 import { Box, Typography } from "@mui/material";
 import Slider from "react-slick";
 
-const DCarousel = ({data, title}) => {
-    const [imgIndex,setImgIndex] = useState(0)
+const DCarousel = ({data, title, setSelectedBg}) => {
+    const [imgIndex, setImgIndex] = useState(0)
 
     const settings = {
         dots:true,
@@ -171,7 +171,10 @@ const DCarousel = ({data, title}) => {
         infinite: true,
         centerPadding: '0px',
         slidesToShow: 1,
-        beforeChange: (current, next) => setImgIndex(next), 
+        beforeChange: (current, next) => {
+            setSelectedBg(next)
+            setImgIndex(next)
+        }, 
         arrows:true,
         responsive:[
             {
@@ -250,8 +253,8 @@ const DCarousel = ({data, title}) => {
                         alt={idx}
                         className={className}
                         style={{
-                            height: title==='downtown'?'230px':'initial',
-                            marginTop: title==='downtown' && idx === imgIndex ?'-35px':'initial',
+                            height: title==='downtown'?'260px':'initial',
+                            marginTop: title==='downtown' && idx === imgIndex ?'-38px':'initial',
                         }}
                     />
                     {title==="villa" && <div className="absolute bottom-[26px] left-[26px] right-[26px] flex items-center justify-between">

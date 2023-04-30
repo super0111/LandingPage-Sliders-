@@ -26,7 +26,7 @@ const CarouselArray = ({data, title, status}) => {
               centerMode: true,
               slidesToShow: 1,
               slidesToShow: 1,
-              centerPadding: '485px',
+              centerPadding: '515px',
           }
         },
         {
@@ -36,35 +36,35 @@ const CarouselArray = ({data, title, status}) => {
               centerMode: true,
               slidesToShow: 1,
               slidesToShow: 1,
-              centerPadding: '385px',
+              centerPadding: '470px',
           }
         },
         {
             breakpoint: 1440,
             settings: {
               slidesToShow: 1,
-              centerPadding: '405px',
+              centerPadding: '475px',
             }
         },
         {
             breakpoint: 1366,
             settings: {
               slidesToShow: 1,
-              centerPadding: '295px',
+              centerPadding: '335px',
             }
         },
         {
             breakpoint: 1280,
             settings: {
               slidesToShow: 1,
-              centerPadding: '285px',
+              centerPadding: '325px',
             }
         },
         {
             breakpoint: 1024,
             settings: {
               slidesToShow: 1,
-              centerPadding: '245px',
+              centerPadding: '285px',
             }
         },
         {
@@ -90,7 +90,7 @@ const CarouselArray = ({data, title, status}) => {
 
     return ( 
       <div className="slider">
-        <Slider {...feSettings}>
+        <Slider {... feSettings}>
           {data.map((item, idx) => (
             <div key={idx} className={idx === imgIndex ? slideClass : "dslide"}>   
                 <Box className={className}>
@@ -110,10 +110,16 @@ const CarouselArray = ({data, title, status}) => {
                   }}>Featured</Button>
                 </Box>
                 <Box mt={2}>
-                  <Typography variant='h4'>{item.title}</Typography>
-                  <Typography variant='h6' mt={2}>{item.details}</Typography>
+                  <Typography variant='h4' sx={{
+                    fontFamily: 'Cormorant Garamond',
+                  }}>{item.title}</Typography>
+                  <Typography variant='h6' mt={2} sx={{
+                    fontSize: 12,
+                  }}>{item.details}</Typography>
                   <Box display={'flex'} alignItems={'center'}>
-                    <Typography variant='h4'>AED</Typography>  
+                    <Typography variant='h4' sx={{
+                      fontFamily: 'Cormorant Garamond',
+                    }}>AED</Typography>  
                     <Typography variant='h6' ml={2} mb={2} sx={{
                       fontFamily: 'Cormorant Garamond',
                       fontSize: 20,

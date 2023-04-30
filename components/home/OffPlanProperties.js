@@ -20,7 +20,7 @@ export const OffPlanProperties = () => {
         textAlign: { sm: 'center', xs: 'left' },
         fontSize: { sm: 42, xs: 32 },
       }}>
-        Off-Plan properties
+        Offplan Projects
       </Typography>
       <Box mt={8} display={'flex'} justifyContent={'space-between'} sx={{
         width: { xs: '100%', sm: '620px', lg: '1100px'},
@@ -32,13 +32,13 @@ export const OffPlanProperties = () => {
             <Box key={i} sx={{
               position: 'relative',
               margin: { xs: '0 5px', sm: 0 },
-              width: { xs:"300px", sm: '205px', xs: '300px' },
+              width: { xs:"96.8%", sm: '205px' },
               flex: 'none',
               opacity: { sm: 0.3, xs: 0.8 },
               transition: 'width 0.5s',
               '&: hover': {
                 opacity: 1,
-                width: { xs:"300px", sm: '235px', xs: '300px' },
+                width: { xs:"96.8%", sm: '235px' },
               }
             }}>
               <Box component={'img'} mx={1} src={item.url.src} alt="" sx={{

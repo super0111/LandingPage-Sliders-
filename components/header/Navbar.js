@@ -46,7 +46,7 @@ const Navbar = ({
     }, [open])
     return (
         <>
-            {open && <div className="absolute right-0 left-0 top-0 flex xl:hidden flex-col h-screen w-full bg-black z-100 overflow-hidden">
+            {open && <div className="absolute right-0 left-0 top-0 flex xl:hidden flex-col h-screen w-full bg-black z-1000 overflow-hidden">
                 <div className="flex items-center justify-between py-4 px-[30px]">
                     <Link href="/">
                         <span className="text-2xl leading-6 text-white font-bold uppercase font-CormorantGaramond">
@@ -77,7 +77,7 @@ const Navbar = ({
                                 value={selected}
                                 data={item}
                                 setSelected={setSelected}
-                                className={`flex items-center gap-2.5 w-[99px] justify-center text-center border-x border-y border-solid rounded-[10px] text-white text-[23px] h-[45px] font-bold ${roboto.className}`} />
+                                className={`flex items-center gap-2.5 w-[99px] justify-center text-center border-white border-x border-y border-solid rounded-[10px] text-white text-[23px] h-[45px] font-bold ${roboto.className}`} />
                         </div>
                     </div>
                     <div className="flex flex-col gap-3">
@@ -94,7 +94,7 @@ const Navbar = ({
                 </div>
                 <div className={`px-6 w-full flex items-center justify-center absolute bottom-20`}>
                         <button
-                            className={`flex items-center justify-center border-x border-y border-solid rounded-[10px] mt-10 text-white text-xl h-[45px] w-full font-normal py-2 px-11 ${roboto.className}`}>
+                            className={`flex items-center justify-center border-white border-x border-y border-solid rounded-[10px] mt-10 text-white text-xl h-[45px] w-full font-normal py-2 px-11 ${roboto.className}`}>
                             {previousStep > 1 ? "View All" : "Sign In"}
                         </button>
                 </div>

@@ -22,8 +22,7 @@ const villas = [
 export default function HomePage () {
   const [ properties, setProperties ] = useState('apartments')
   const [ villasStatus, setVillasStatus ] = useState(0);
-
-console.log('propertiesproperties', properties)
+  
   return (
     <Box sx={{
       background: palette.common.black,

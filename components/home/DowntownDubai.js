@@ -1,10 +1,11 @@
 import { palette } from "@/themes"
 import { Box, Button, Grid, Typography } from "@mui/material"
 import DCarousel from "../carousel/3dCarousel"
+import { useState } from "react"
 
 const data = [
   { img: '/images/Header.png', concept: 651, number: '01' },
-  { img: '/images/Header.png', concept: 216, number: 'PENTHOUSE' },
+  { img: '/images/03.png', concept: 216, number: 'PENTHOUSE' },
   { img: '/images/Header.png', concept: 651, number: 'PENTHOUSE' },
   { img: '/images/Header.png', concept: 621, number: 'PENTHOUSE' },
   { img: '/images/Header.png', concept: 651, number: 'PENTHOUSE' },
@@ -18,6 +19,7 @@ const items = [
 ]
 
 export const DowntownDubai = () => {
+  const [ selectedBg, setSelectedBg ] = useState(0)
 
   return (
     <Box 
@@ -27,7 +29,7 @@ export const DowntownDubai = () => {
       className='downtown'
       mt={16} px={{ sm: 8, xs: 4 }} 
       sx={{
-        backgroundImage: `url(/images/Header.png)`,
+        backgroundImage: `url(${data[selectedBg].img})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: { md: '650px', xs: '580px'},
@@ -75,12 +77,12 @@ export const DowntownDubai = () => {
           <Grid item md={6} xs={12} display={{ lg: 'flex', md: 'none' }} justifyContent={'end'}>
             <Box sx={{
               width: { lg: '540px', md: '400px' },
-              marginBottom: '-43px !important',
+              marginBottom: '-45px !important',
               position: 'absolute',
               right: 0,
               bottom: 0,
             }}>
-              <DCarousel data={data} title='downtown' />
+              <DCarousel data={data} title='downtown' setSelectedBg={setSelectedBg}/>
             </Box>
           </Grid>
         </Grid>

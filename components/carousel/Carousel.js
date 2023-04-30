@@ -132,12 +132,12 @@ const Carousel = ({ data, title }) => {
           </div>
         ))}
       </Slider>
-      <div className="absolute text-white bottom-4 w-24 left-1/2 right-1/2 ml-[-48px]">
+      <div className="absolute text-white bottom-4 w-20 sm:w-24 left-1/2 right-1/2 ml-[-48px]">
         <Slider {...feSettings} ref={thumbnailSliderRef}>
           {new Array(100).fill().map((item, idx) => (
             <div key={idx}>
               <span 
-              className={`bg-white w-1.5 h-1.5 lg:w-2.5 lg:h-2.5 flex items-center justify-center rounded-full`}
+              className={`bg-white w-2 h-2 sm:w-2.5 sm:h-2.5 flex items-center justify-center rounded-full`}
               style={getItemStyle(idx, centerIndex, 100)}>
               </span>
             </div>
