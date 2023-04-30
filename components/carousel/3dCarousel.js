@@ -253,9 +253,9 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                         alt={idx}
                         className={className}
                         style={{
-                            height: title==='downtown'?'245px': title='offPlan' ? '450px' :'initial',
+                            height: title='downtown'?'245px': title='offPlan' ? '450px' :'initial',
                             opacity: title='offPlan' ? 0.7 :'initial',
-                            marginTop: title==='downtown' && idx === imgIndex ?'-38px':'initial',
+                            marginTop: title='downtown' && idx === imgIndex ?'-33px':'initial',
                         }}
                     />
                     {title === "villa" && 

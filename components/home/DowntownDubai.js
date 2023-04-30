@@ -74,10 +74,10 @@ export const DowntownDubai = () => {
               }
             </Grid>
           </Grid>
-          <Grid item md={6} xs={12} display={{ lg: 'flex', md: 'none' }} justifyContent={'end'}>
+          <Grid item md={6} xs={12} display={{ lg: 'flex', md: 'none', xs: 'none', sm: 'none' }} justifyContent={'end'}>
             <Box sx={{
               width: { lg: '540px', md: '400px' },
-              marginBottom: '-45px !important',
+              marginBottom: '-65px !important',
               position: 'absolute',
               right: 0,
               bottom: 0,
