@@ -111,10 +111,11 @@ const CarouselArray = ({data, title, status}) => {
                 </Box>
                 <Box mt={2}>
                   <Typography variant='h4' sx={{
+                    fontSize: 20,
                     fontFamily: 'Cormorant Garamond',
                   }}>{item.title}</Typography>
                   <Typography variant='h6' mt={2} sx={{
-                    fontSize: 12,
+                    fontSize: 15,
                   }}>{item.details}</Typography>
                   <Box display={'flex'} alignItems={'center'}>
                     <Typography variant='h4' sx={{
@@ -122,7 +123,7 @@ const CarouselArray = ({data, title, status}) => {
                     }}>AED</Typography>  
                     <Typography variant='h6' ml={2} mb={2} sx={{
                       fontFamily: 'Cormorant Garamond',
-                      fontSize: 20,
+                      fontSize: 24,
                     }}>{item.AED}</Typography>
                   </Box>
                 </Box>

@@ -253,22 +253,25 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                         alt={idx}
                         className={className}
                         style={{
-                            height: title==='downtown'?'245px':'initial',
+                            height: title==='downtown'?'245px': title='offPlan' ? '450px' :'initial',
+                            opacity: title='offPlan' ? 0.7 :'initial',
                             marginTop: title==='downtown' && idx === imgIndex ?'-38px':'initial',
                         }}
                     />
-                    {title==="villa" && <div className="absolute bottom-[26px] left-[26px] right-[26px] flex items-center justify-between">
-                        <button className="flex items-center gap-2">
+                    {title === "villa" && 
+                        <div className="absolute bottom-[26px] left-[26px] right-[26px] flex items-center justify-between">
+                            <button className="flex items-center gap-2">
+                                <span className="text-[19px] text-white font-normal leading-[19px]">
+                                    Jumeirah
+                                </span>
+                                <img alt="arrow" src="/images/angle-right.svg" className="h-2.5" />
+                            </button>
                             <span className="text-[19px] text-white font-normal leading-[19px]">
-                                Jumeirah
+                                10,00,000 AED
                             </span>
-                            <img alt="arrow" src="/images/angle-right.svg" className="h-2.5" />
-                        </button>
-                        <span className="text-[19px] text-white font-normal leading-[19px]">
-                             10,00,000 AED
-                        </span>
-                    </div>}
-                    {title==='popular' && 
+                        </div>
+                    }
+                    {title === 'popular' && 
                         <Box sx={{
                             position: 'absolute',
                             bottom: '15px',
@@ -278,7 +281,7 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                             <Typography variant='h4'>{item.text2}</Typography>
                         </Box> 
                     }
-                    {title==='downtown' &&
+                    {title === 'downtown' &&
                         <Box>
                             <Typography variant='h4' sx={{
                                 position: 'absolute',
@@ -295,6 +298,34 @@ const DCarousel = ({data, title, setSelectedBg}) => {
                                 fontWeight: 700,
                                 zIndex: 100
                             }}>0{idx+1}</Typography>
+                        </Box>
+                    }
+                    {title = 'offPlan' &&
+                        <Typography variant="h4" sx={{
+                            maxWidth: '80%',
+                            position: 'absolute',
+                            left: '9%',
+                            bottom: { xs: '45px', sm: 'initial'},
+                            textAlign: { sm: 'center', xs: 'left' },
+                        }}>
+                            {item.text}
+                        </Typography>
+                    }
+                    {title = 'ourJournal' &&
+                        <Box mt={6} mx={2}>
+                            <Typography variant='h4' sx={{
+                                fontFamily: 'Cormorant Garamond',
+                                fontSize: 20,
+                                fontWeight: 500,
+                            }}>{item.title}</Typography>
+                            <Typography variant='h6' my={2} sx={{ 
+                                color: '#bcbbbb', 
+                                fontFamily: 'Cormorant Garamond',
+                                fontSize: 20,
+                                lineHeight: 1.3,
+                            }}>{item.details}</Typography>
+                            <Typography variant='h4' mt={4} sx={{ color: '#bcbbbb' }}>{item.portfolio}</Typography>  
+                            <Typography variant='h6' sx={{ color: '#bcbbbb' }}>{item.date}</Typography>
                         </Box>
                     }
                 </div>

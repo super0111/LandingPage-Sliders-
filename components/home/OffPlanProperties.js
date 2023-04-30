@@ -1,4 +1,7 @@
 import { Box, Typography } from "@mui/material"
+
+import DCarousel from '../carousel/3dCarousel'
+
 import image1 from '../../assets/images/Layer1.png'
 import image2 from '../../assets/images/Layer2.png'
 import image3 from '../../assets/images/Layer3.png'
@@ -13,6 +16,15 @@ const propertyItems = [
   { url: image5, text: 'DOWNtown Dubai Penthouse' },
 ]
 
+const propertyItems1 = [
+  { img: '/images/offPlan/Layer1.png', text: 'DOWNtown Dubai Penthouse' },
+  { img: '/images/offPlan/Layer2.png', text: 'DOWNtown Dubai Penthouse' },
+  { img: '/images/offPlan/Layer3.png', text: 'DOWNtown Dubai Penthouse' },
+  { img: '/images/offPlan/Layer4.png', text: 'DOWNtown Dubai Penthouse' },
+  { img: '/images/offPlan/Layer5.png', text: 'DOWNtown Dubai Penthouse' },
+]
+
+
 export const OffPlanProperties = () => {
   return (
     <Box py={10} px={4} className='offPlan'>
@@ -22,7 +34,7 @@ export const OffPlanProperties = () => {
       }}>
         Offplan Projects
       </Typography>
-      <Box mt={8} display={'flex'} justifyContent={'space-between'} sx={{
+      <Box mt={8} display={{ sm: 'flex', xs: 'none'}} justifyContent={'space-between'} sx={{
         width: { xs: '100%', sm: '620px', lg: '1100px'},
         margin: 'auto',
         overflowX: 'auto',
@@ -60,6 +72,11 @@ export const OffPlanProperties = () => {
           ))
         }
       </Box>
+
+      <Box display={{ sm: 'none', xs: 'block' }}>
+        <DCarousel data={propertyItems1} title='offPlan' />
+      </Box>
+
     </Box>
   )
 }

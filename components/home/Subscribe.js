@@ -24,6 +24,7 @@ export const Subscribe = () => {
               fontWeight: 400,
               fontFamily: '__Roboto_58f936,__Roboto_Fallback_58f936',
               textAlign: { lg: 'center', sm: 'left', xs: 'center'},
+              fontSize: 16,
             }}>
               Subscribe to our news letter and get latest market prices
             </Typography>

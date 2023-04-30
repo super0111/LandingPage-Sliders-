@@ -487,7 +487,7 @@ const SearchPage = () => {
                 <div className="flex items-center gap-5 xl:hidden w-full px-6">
                     <button
                         onClick={handleSortBy}
-                        className="w-full py-2 gap-4 border-x border-y border-solid border-[#7a7c83] bg-black flex items-center justify-center">
+                        className="w-full py-3 gap-4 border-x border-y border-solid border-[#7a7c83] bg-black flex items-center justify-center">
                         <Image alt="sortby" src={sortbyIcon} width={10} height={8} />
                         <span className="text-xs tracking-[5px] text-[#7a7c83] uppercase font-myraidPro">
                             sort by
@@ -505,7 +505,7 @@ const SearchPage = () => {
                 <div className="grid grid-cols-12 lg:gap-10 px-6 lg:px-40 w-full">
                     {
                         paginatedPosts.map((item, index) => (
-                            <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 mt-7" key={index}>
+                            <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 mt-10 sm:mt-7" key={index}>
                                 <Carousel data={item.data} title="Search" />
                                 <span className="text-white uppercase text-lg font-bold font-CormorantGaramond">
                                     Downtown Dubai Penthouse
