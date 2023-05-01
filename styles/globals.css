@@ -338,3 +338,7 @@ select option {
         top: -5%;
     }
 }
+
+.ourJournal .slick-track {
+    padding-left: 28px;
+}

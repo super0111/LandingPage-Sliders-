@@ -126,7 +126,7 @@ const Carousel = ({ data, title }) => {
                     ? "h-[1113px]"
                     : title === "Search"
                     ? "h-[434px] 2xl:h-[630px]"
-                    : "h-auto"
+                    : "h-[280px] sm:h-[320px] lg:h-[350px]"
                 }`}
             />
           </div>

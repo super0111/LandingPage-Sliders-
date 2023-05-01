@@ -4,11 +4,11 @@ import DCarousel from "../carousel/3dCarousel"
 import { useState } from "react"
 
 const data = [
-  { img: '/images/Header.png', concept: 651, number: '01' },
-  { img: '/images/03.png', concept: 216, number: 'PENTHOUSE' },
-  { img: '/images/Header.png', concept: 651, number: 'PENTHOUSE' },
-  { img: '/images/Header.png', concept: 621, number: 'PENTHOUSE' },
-  { img: '/images/Header.png', concept: 651, number: 'PENTHOUSE' },
+  { img: '/images/downtown/Header.png', concept: 651, number: '01' },
+  { img: '/images/downtown/02.jpg', concept: 216, number: 'PENTHOUSE' },
+  { img: '/images/downtown/03.jpg', concept: 651, number: 'PENTHOUSE' },
+  { img: '/images/downtown/04.jpg', concept: 621, number: 'PENTHOUSE' },
+  { img: '/images/downtown/05.jpg', concept: 651, number: 'PENTHOUSE' },
 ]
 
 const items = [
@@ -33,6 +33,7 @@ export const DowntownDubai = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: { md: '650px', xs: '580px'},
+        opacity: 0.8,
         position: 'relative',
       }}
     >

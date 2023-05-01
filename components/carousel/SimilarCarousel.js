@@ -57,7 +57,7 @@ const SimilarCarousel = ({data, title}) => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         arrows:false,
         autoplay: false,
         responsive:[
@@ -100,7 +100,7 @@ const SimilarCarousel = ({data, title}) => {
 
     return ( 
         <div className="block">
-            <Slider {... title==='similarProperty' ? settings : settings1 } ref={slider}>
+            <Slider {... title==='similarProperty' ? settings : settings1 } ref={slider} className={(title === 'ourJournal' || title === 'offPlan') && 'ourJournal'}>
                 {
                     data.map((item,index)=>(
                         <Box px={ title === 'similarProperty' ? 7 : 2 } key={index} sx={{
@@ -157,14 +157,31 @@ const SimilarCarousel = ({data, title}) => {
                                         }}>{item.title}</Typography>
                                         <Typography variant='h6' my={2} sx={{ 
                                             fontFamily: 'Cormorant Garamond',
-                                            fontSize: 20,
+                                            fontSize: 18,
                                             fontWeight: 300,
                                             lineHeight: 1.3,
                                         }}>{item.details}</Typography>
-                                        <Typography variant='h4' mt={4} sx={{ 
-                                            fontSize: 12,
-                                        }}>{item.portfolio}</Typography>  
-                                        <Typography variant='h6' sx={{ fontSize: 12 }}>{item.date}</Typography>
+                                        <Box display={'flex'} justifyContent={'start'} alignItems={'center'} mt={4}>
+                                            <Typography sx={{
+                                                fontSize: 14,
+                                                fontWeight: 500,
+                                                color: '#dcdcdc'
+                                            }}>PORTFOLIO</Typography>
+                                            <Typography mx={2} sx={{
+                                                borderTop: '2px solid #dcdcdc',
+                                                width: '1px',
+                                            }}></Typography>
+                                            <Typography variant='h4' sx={{ 
+                                                fontSize: 14,
+                                                fontWeight: 500,
+                                                color: '#dcdcdc'
+                                            }}>{item.portfolio}</Typography>  
+                                        </Box>
+                                        <Typography variant='h6' sx={{ 
+                                            fontSize: 14,
+                                            fontWeight: 500,
+                                            color: '#dcdcdc'
+                                         }}>{item.date}</Typography>
                                     </Box>
                                 }
                         </Box>

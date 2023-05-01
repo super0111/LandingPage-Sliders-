@@ -11,21 +11,20 @@ export const Subscribe = () => {
       margin: 'auto',
     }}>
       <Grid container spacing={0} mt={{ sm: 12, xs: 8 }}>
-        <Grid item md={6} sm={12} gap={2} mb={{ md: 0, xs: 4 }}>
+        <Grid item md={6} sm={12} gap={2} mb={{ md: 0, xs: 4 }} width={{ sm: 'initial', xs: '100%' }}>
           <Box 
             display={'flex'} 
             flexDirection={'column'} 
             alignItems={{ md: 'start', xs: 'center' }}
           >
             <Typography variant="h2" sx={{
-              fontSize: { sm: 36, xs: 28 },
-              fontFamily: 'Cormorant Garamond',
+              fontSize: { sm: 36, xs: 24 },
             }}>Stay Blingy!</Typography>
             <Typography variant="h3" mt={4} sx={{
               fontWeight: 400,
               fontFamily: '__Roboto_58f936,__Roboto_Fallback_58f936',
               textAlign: { lg: 'center', sm: 'left', xs: 'center'},
-              fontSize: 16,
+              fontSize: { sm: 16, xs: 14},
             }}>
               Subscribe to our news letter and get latest market prices
             </Typography>

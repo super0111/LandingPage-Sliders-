@@ -6,9 +6,9 @@ const featuredApartments = [
   { 
     items: [
       { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
+      { img: "/images/villa/03.jpg" },
+      { img: "/images/villa/04.jpg" },
+      { img: "/images/villa/05.jpg" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
     details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
@@ -16,10 +16,10 @@ const featuredApartments = [
   },
   {
     items: [
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
+      { img: "/images/villa/06.jpg" },
+      { img: "/images/villa/07.jpg" },
+      { img: "/images/villa/08.jpg" },
+      { img: "/images/villa/09.jpg" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
     details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
@@ -27,10 +27,10 @@ const featuredApartments = [
   },
   {
     items: [
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
+      { img: "/images/villa/10.jpg" },
+      { img: "/images/villa/11.jpg" },
+      { img: "/images/villa/12.jpg" },
+      { img: "/images/villa/13.jpg" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
     details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
@@ -38,10 +38,10 @@ const featuredApartments = [
   },
   {
     items: [
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
+      { img: "/images/villa/14.jpg" },
+      { img: "/images/villa/15.jpg" },
+      { img: "/images/villa/16.jpg" },
+      { img: "/images/villa/17.jpg" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
     details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
@@ -49,10 +49,10 @@ const featuredApartments = [
   },
   {
     items: [
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
-      { img: "/images/villa/02.png" },
+      { img: "/images/villa/18.jpg" },
+      { img: "/images/villa/19.jpg" },
+      { img: "/images/villa/12.jpg" },
+      { img: "/images/villa/04.jpg" },
     ],
     title: 'DOWNTOWN DUBAI PENTHOUSE',
     details: 'PENTHOUSE - 3 BED - 13,00 SQ.FT',
